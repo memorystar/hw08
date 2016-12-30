@@ -4,54 +4,52 @@
 }
 */
 
-function showMsg(msg1,msg2){
-    var allMsg = 
-    msg1+msg2;
+function showMsg(msg1, msg2) {
+    var allMsg =
+        msg1 + msg2;
     return allMsg;
 }
 
-function random(){
+function random() {
     var M = parseInt(document.getElementById('M').value);
     /*console.log(M);*/
     /*return Math.floor(Math.random()*M+1);*/
-    document.getElementById('result').value = Math.floor(Math.random()*M+1);
+    document.getElementById('result').value = "產生亂數 " + Math.floor(Math.random() * M + 1);
 }
 
-function bigmath(){
+function bigmath() {
     var a = parseInt(document.getElementById('a').value);
     var b = parseInt(document.getElementById('b').value);
-    if (a>b){
-        document.getElementById('result2').value = a+" 比較大";
-    }
-    else{
-        document.getElementById('result2').value = b+" 比較大";
+    if (a > b) {
+        document.getElementById('result2').value = a + " 比較大";
+    } else {
+        document.getElementById('result2').value = b + " 比較大";
     }
 }
 
-function arr(){
+function arr() {
     var arr1 = document.getElementById('arr1').value;
-    var arr2 = [arr1].value;
-    document.getElementById('result3').value = "最後一個元素為"+arr2;
-    }
+    var arr2 = arr1.split(",");
+    var z = arr2.slice(-1);
+    document.getElementById('result3').value = "最後一個元素為" + z;
+}
 
-function abp(){
+function abp() {
     var ap = parseInt(document.getElementById('ap').value);
     var bp = parseInt(document.getElementById('bp').value);
-    document.getElementById('result4').value = "答案為"+((ap*ap)+(bp*bp));
-    }
+    document.getElementById('result4').value = "答案為 " + ((ap * ap) + (bp * bp));
+}
 
 
-function leapYearA(){
+function leapYearA() {
     var yearA = parseInt(document.getElementById('yearA').value);
     var ya = "Yes";
     var yb = "No";
-    if (yearA % 400 === 0 ) {
+    if (yearA % 400 === 0) {
         document.getElementById('result5').value = ya;
-    }
-    else if(yearA % 4 === 0 && yearA % 100 != 0 ){
+    } else if (yearA % 4 === 0 && yearA % 100 != 0) {
         document.getElementById('result5').value = ya;
-    }
-    else{
+    } else {
         document.getElementById('result5').value = yb;
     }
 }
@@ -61,9 +59,9 @@ function leapYearA(){
 
 
 myShose = {
-    brand:"sk",
-    size:7,
-    forFemale:true
+    brand: "sk",
+    size: 7,
+    forFemale: true
 }
 
 /*
@@ -93,15 +91,15 @@ $(document).ready(function(){
      $(this).css("background","white");
    })
    */
+
+/*$("td").click(function(){
+  $(this).hide();
+})
    
-   /*$("td").click(function(){
-     $(this).hide();
-   })
-   
-   $("td[colspan=2]").click(function(){
-     $("table *").show();
-   })*/
-   /*
+$("td[colspan=2]").click(function(){
+  $("table *").show();
+})*/
+/*
    $("td[colspan=2]").click(function(){
      $("td").fadeToggle(1000);
      $(this).show();
